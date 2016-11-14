@@ -35,7 +35,7 @@
 
 ## User - Channels 
 
-* [Deep-rust Gitter channel]()
+* [Deep-rust Gitter channel](https://gitter.im/dvigneshwer/deeprust)
 * [Mozilla TN blog](https://mozillatn.github.io/)
 
 ## Contributors profiles 

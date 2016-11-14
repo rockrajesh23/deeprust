@@ -2,7 +2,7 @@
 
 ## Welcome note
 
-Thanks for visiting deep-rust, this is [@dvignesher](https://twitter.com/dvigneshwer) project lead for deeprust project. I am a data scientist by profession and a Mozilla representative in India. 
+Thanks for visiting deep-rust, this is [@dvigneshwer](https://twitter.com/dvigneshwer) project lead for deeprust project. I am a data scientist by profession and a Mozilla representative in India. 
 
 ## Why Open Project
 
@@ -34,4 +34,4 @@ Main reason behind open-project is to have man-eye principle concept for getting
 
 ## Coding practice
 
-* Check out [code guide lines]()
+* Check out [code guide lines](https://github.com/dvigneshwer/deeprust/blob/master/code_of_conduct/code_of_conduct.md)
