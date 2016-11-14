@@ -1,6 +1,8 @@
 
 # DeepRust - DeepLearning in Rust
 
+[![Gitter](https://badges.gitter.im/dvigneshwer/deeprust.svg)](https://gitter.im/dvigneshwer/deeprust?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## Vision
 
 To create a deeplearning crate in rust to provide great experience to researchers & developers to develop learning algorithms and architecture in rust-lang
