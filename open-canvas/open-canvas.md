@@ -2,8 +2,8 @@
 
 ## Problem 
 
-* There is not deeplearning crate in rust-lang
-* No deeplearning crate has been developed based on continous research community feedback
+* There is no deeplearning crate in rust-lang
+* No deeplearning crate has been developed based on continous research community feedbacks
 
 ## Solution
 
@@ -31,7 +31,7 @@
 * Data analysts
 * Data Engineers
 * Data Scientists
-* Developers
+* Rust Developers
 
 ## User - Channels 
 
