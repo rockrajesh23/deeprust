@@ -5,7 +5,7 @@
 
 ## Vision
 
-To create a deeplearning crate in rust to provide great experience to researchers & developers to develop learning algorithms and architecture in rust-lang
+To create a deeplearning crate in rust aiming to create a great experience for ML researchers & developers to develop learning algorithms and architecture in rust-lang
 
 ## Project Description
 
