@@ -1,7 +1,10 @@
 // Task : Evaluation metrics for deeplearning algorithms results
-// Date :- 6th Feb 2017
-// Authors :- @dvigneshwer  @nifey
-// Version :- 0.0.2
+// Date :- 4th Feb 2017
+// Authors :- @dvigneshwer
+// Version :- 0.0.1
+
+// Modified by : @nifey
+// Date : 6th Feb 2017
 
 use std::{i32, f32};
 
