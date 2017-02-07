@@ -1,34 +1,94 @@
 // Task : Evaluation metrics for deeplearning algorithms results
 // Date :- 4th Feb 2017
-// Author :- @dvigneshwer
+// Authors :- @dvigneshwer
 // Version :- 0.0.1
 
-use std::{i32,f32};
+// Modified by : @nifey
+// Date : 6th Feb 2017
+
+use std::{i32, f32};
 
 // Sample function for assigning values to confusion matrix
 fn main() {
-	// assigning random values to the confusion matrix
-    let(true_positive,true_negative,false_positive,false_negative)=(100,50,10,5);
-    
-    // define a total closure
-	let total_predictions = |x, y, z, v| x+y+z+v;
-    let total = total_predictions(true_positive,true_negative,false_positive,false_negative);
+    // assigning random values to the confusion matrix
+    let sample = Confusionmatrix {
+        true_positive: 100,
+        true_negative: 50,
+        false_positive: 10,
+        false_negative: 5,
+    };
 
-    println!("The total predictions {}",total);
+    println!("The total predictions {}", sample.total());
     // Calculating the accuracy of the model
-    println!("Accuracy of the model {:.2}",percentage(accuracy(true_positive,true_negative,total)));
+    println!("Accuracy of the model {:.2}", sample.accuracy());
+    // Calculating the precision of the model
+    println!("Precision of the model {:.2}", sample.precision());
+    // Calculating the true positive rate of the model
+    println!("True positive rate of the model {:.2}",
+             sample.true_poitive_rate());
+    // Calculating the false positive rate of the model
+    println!("False positive rate of the model {:.2}",
+             sample.false_positive_rate());
+    // Calculating the misclassification rate of the model
+    println!("Misclassification rate of the model {:.2}",
+             sample.misclassification_rate());
+    // Calculating the specificity of the model
+    println!("Specificity of the model {:.2}", sample.specificity());
+    // Calculating the prevalance of the model
+    println!("Prevalance of the model {:.2}", sample.prevalance());
+
 
 }
 
-// Accuracy Measures the overall performance of the model
-fn accuracy(tp:i32,tn:i32,total:i32) -> f32 {
-	// if semi-colon is not put then that returns 
-	// No automatic type cast in rust 
-	(tp as f32 + tn as f32 )/(total as f32)
+//defining a struct to represent a confusion matrix for a binary classifier
+struct Confusionmatrix {
+    true_positive: i32,
+    true_negative: i32,
+    false_positive: i32,
+    false_negative: i32,
 }
 
-// Converting to percentage 
-fn percentage(value:f32) -> f32 {
-	value as f32 *100.0
+impl Confusionmatrix {
+    //to find total number of predictions
+    fn total(&self) -> i32 {
+        self.true_positive + self.true_negative + self.false_positive + self.false_negative
+    }
+    //to find the accuracy of the model
+    fn accuracy(&self) -> f32 {
+        percentage((self.true_positive as f32 + self.true_negative as f32) / (self.total() as f32))
+    }
+    //to find the precision of the model
+    fn precision(&self) -> f32 {
+        percentage((self.true_positive as f32) /
+                   (self.true_positive as f32 + self.false_positive as f32))
+    }
+    //to find the true positive rate of the model
+    fn true_poitive_rate(&self) -> f32 {
+        percentage((self.true_positive as f32) /
+                   (self.true_positive as f32 + self.false_negative as f32))
+    }
+    //to find the false positive rate of the model
+    fn false_positive_rate(&self) -> f32 {
+        percentage((self.false_positive as f32) /
+                   (self.false_positive as f32 + self.true_negative as f32))
+    }
+    //to find the misclassification rate of the model
+    fn misclassification_rate(&self) -> f32 {
+        percentage((self.false_positive as f32 + self.false_negative as f32) /
+                   (self.total() as f32))
+    }
+    //to find the specificity of the model
+    fn specificity(&self) -> f32 {
+        percentage((self.true_negative as f32) /
+                   (self.false_positive as f32 + self.true_negative as f32))
+    }
+    //to find the prevalance of the model
+    fn prevalance(&self) -> f32 {
+        percentage((self.true_positive as f32 + self.false_negative as f32) / (self.total() as f32))
+    }
 }
 
+// Converting to percentage
+fn percentage(value: f32) -> f32 {
+    value as f32 * 100.0
+}
