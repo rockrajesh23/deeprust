@@ -2,7 +2,7 @@
 
 ### Theory
 
-Here are links to the explanation of l2 regularization 
+Here are links to the explanation of l2 regularization  
 1. [earthlyabhijay blog](https://earthlyabhijay.wordpress.com/2016/12/06/regularization/)  
 2. [Holehous; Regularization from Andrew Ng's lecture ](http://www.holehouse.org/mlclass/07_Regularization.html)  
 
