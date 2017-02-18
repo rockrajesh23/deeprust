@@ -26,6 +26,7 @@ Documentation of different code and fucntional units of deeprust project
 ## Code Units Details
 * [Gradient Descent](./sgd_working.md)
 * [Confusion Matrix](./confusion_matrix.md)
+* [Regularization](./l2_reg.md)
 
 ## Adding an unit - Contributor Details
 
