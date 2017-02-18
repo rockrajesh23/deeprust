@@ -1,8 +1,5 @@
+before_script: cd $TRAVIS_BUILD_DIR/code/deeprust
 language: rust
 rust:
   - stable
-  - beta
-  - nightly
-matrix:
-  allow_failures:
-    - rust: nightly
+
