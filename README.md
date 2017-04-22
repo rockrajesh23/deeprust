@@ -1,3 +1,4 @@
+<img src="https://cloud.githubusercontent.com/assets/5075497/25305466/2b244dc8-2799-11e7-8756-87e49e70bb6b.png" width="480" height="150" />
 
 # DeepRust - DeepLearning in Rust
 
