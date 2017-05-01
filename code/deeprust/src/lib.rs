@@ -4,5 +4,4 @@
 // Version : 1.0
 
 pub mod metrics;
-pub mod L2_reg;
-pub mod sgd;
+pub mod reg;

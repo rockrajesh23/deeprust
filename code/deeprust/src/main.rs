@@ -3,15 +3,52 @@
 // Date : 18th FEB 2016
 // Version : 1.0
 
-extern crate deeprust_units;
+extern crate deeprust;
+
+use deeprust::metrics::confusion_matrix as eval;
+use deeprust::reg::l2_reg as l2;
 
 fn main() {
-    println!("Performing metrics");
-    deeprust_units::metrics::confusion_matrix::exec();
 
-    println!("Performing L2 regularization");
-    deeprust_units::L2_reg::l2_reg::exec();
+    // assigning random values to the confusion matrix
+    let sample = eval::Confusionmatrix {
+        true_positive: 100,
+        true_negative: 50,
+        false_positive: 10,
+        false_negative: 5,
+    };
 
-    println!("Performing gradient");
-    deeprust_units::sgd::gradient::exec();
+    println!("The total predictions {}", sample.total());
+    // Calculating the accuracy of the model
+    println!("Accuracy of the model {:.2}", sample.accuracy());
+    // Calculating the precision of the model
+    println!("Precision of the model {:.2}", sample.precision());
+    // Calculating the true positive rate of the model
+    println!("True positive rate of the model {:.2}",
+             sample.true_poitive_rate());
+    // Calculating the false positive rate of the model
+    println!("False positive rate of the model {:.2}",
+             sample.false_positive_rate());
+    // Calculating the misclassification rate of the model
+    println!("Misclassification rate of the model {:.2}",
+             sample.misclassification_rate());
+    // Calculating the specificity of the model
+    println!("Specificity of the model {:.2}", sample.specificity());
+    // Calculating the prevalance of the model
+    println!("Prevalance of the model {:.2}", sample.prevalance());
+
+
+    // test variables
+    let lambda = 4.0_f64;
+    let m = 5.0; // Number of training samples y.len()
+    let theta : Vec<f64> = vec![1.0,2.0,3.0,4.0];
+    let mut loss = 3.0;
+    // printing input
+    println!("\nlambda = {0} \nm = {1} \ntheta = {2:?} \nloss = {3}", lambda, m, theta, loss);
+    println!("theta^2 = {0} ", l2::regularization_term(lambda, theta.clone())/lambda);
+    println!("lambda*theta_square = {0} ", l2::regularization_term(lambda, theta.clone()));
+    println!("(lambda*theta_square)/(2.0*m) = {0} ", l2::regularization_term(lambda, theta.clone())/(2.0*m));
+    // function call
+    loss = loss + l2::regularization_term(lambda, theta)/(2.0*m);
+    println!("loss = {} \n", loss);  
 }

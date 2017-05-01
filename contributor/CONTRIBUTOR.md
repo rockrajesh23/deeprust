@@ -34,4 +34,8 @@ Main reason behind open-project is to have man-eye principle concept for getting
 
 ## Coding practice
 
-* Check out [code guide lines](https://github.com/dvigneshwer/deeprust/blob/master/code_of_conduct/code_of_conduct.md)
+* Check out [coding standards](/code/)
+
+## Code of conduct
+
+* Check out [code of conduct lines](https://github.com/dvigneshwer/deeprust/blob/master/code_of_conduct/code_of_conduct.md)

@@ -10,23 +10,28 @@ Rust Development Version :-
 
 ## Code Header
 
+* Follow a header in each script
+
 ~~~~
-// Task :-
-// Author :-
-// Version :-
-// Date : -
+// Task : What does the script do
+// Name : Name of the author
+// Date : When was it created
+// Version : Start with 1.0 when its functionality achieved
 ~~~~
 
-Incoprate this header format in all scripts for users and contributors to get a picture about what is the script all about
+* Modifying an existing code, follow the below
 
-# Code units Explanation
+~~~~
+// Modified by : Name of the author who modified code
+// Date : Modification Date
+~~~~
 
-Documentation of different code and fucntional units of deeprust project
+## Collabration Technique
 
-## Code Units Details
-* [Gradient Descent](./sgd_working.md)
-* [Confusion Matrix](./confusion_matrix.md)
-* [Regularization](./l2_reg.md)
+* Fork the project
+* Make th modification in code
+* Give a PR to the main branch
+* Roles will be delegated based on the contributor's participation
 
 ## Adding an unit - Contributor Details
 
@@ -38,8 +43,10 @@ Documentation of different code and fucntional units of deeprust project
 // Code workflow
 // How to test
 ~~~~
+
 * Follow this checklist before the PR
 ~~~~
-// Added the code explanation md file [Example](./sgd_working.md)
-// Make an entry of the file in the **Different unit** section of readme.md file
+// Added the code explanation md file in the docs folder [Example](./docs/confusion_matrix.md)
+// Make an entry of the file in the **Different unit** section of readme.md of docs directory
 ~~~~
+
