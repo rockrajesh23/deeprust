@@ -3,8 +3,6 @@
 // Date : 1-JUN-2017 
 
 // Macro for confusion matrix
-use metrics::confusion_matrix;
-
 #[macro_export]
 macro_rules! Confusionmatrix {
     ($true_positive:expr, $true_negative:expr, $false_positive:expr, $false_negative:expr) => {
