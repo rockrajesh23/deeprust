@@ -2,21 +2,16 @@
 // Author : Vigneshwer 
 // Date : 18th FEB 2016
 // Version : 1.0
-
+#[macro_use(Confusionmatrix)]
 extern crate deeprust;
 
-use deeprust::metrics::confusion_matrix as eval;
+use deeprust::metrics::confusion_matrix;
 use deeprust::reg::l2_reg as l2;
 
 fn main() {
 
     // assigning random values to the confusion matrix
-    let sample = eval::Confusionmatrix {
-        true_positive: 100,
-        true_negative: 50,
-        false_positive: 10,
-        false_negative: 5,
-    };
+    let sample = Confusionmatrix!(100,50,10,5);
 
     println!("The total predictions {}", sample.total());
     // Calculating the accuracy of the model
