@@ -5,3 +5,4 @@
 
 pub mod metrics;
 pub mod reg;
+pub mod macros;
